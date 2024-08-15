@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: rgb(249, 248, 248);
+}
+
+img {
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    /* border: 2px solid red; */
+    padding: 5px 45px;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(190, 40, 40, 0.5);
+    /*shadow for the box*/
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /*nav bar looks above the side bar*/
+    background-color: rgb(248, 245, 245);
+    /*this line erases the overlapping of the side bar*/
+}
+
+.nav-right img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.nav-right .userImg {
+    width: 27px;
+    /* margin-right: 15px; */
+    border-radius: 50%;
+    /*determines round shape of the icon*/
+}
+
+.nav-left img {
+    width: 25px;
+}
+
+.nav-left .ytLogo {
+    width: 80px;
+}
+
+.nav-middle {
+    /* border: 2px solid red; */
+    width: 50%;
+}
+
+.nav-middle .mic-icon {
+    width: 30px;
+
+}
+
+.searchbox {
+    width: 100%;
+    border: 1px solid rgb(121, 119, 119);
+    /*curve border for the search box*/
+    border-radius: 65px;
+    justify-content: space-evenly;
+    /*space between icon and box*/
+    padding-left: 1rem;
+
+}
+
+.searchbox input {
+    width: 110%;
+    border: none;
+    padding: .2rem;
+    outline: none;
+    margin-right: 4px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: rgb(18, 17, 17);
+}
+
+.searchbox img {
+    width: 70%;
+    padding: 1px;
+    /* border: 2px solid green; */
+    /* border-radius: 25px; out border */
+
+}
+
+.search-div {
+    width: 20%;
+    background-color: rgb(255, 253, 253);
+    border-radius: 50px;
+    border-bottom-right-radius: 50px;
+    justify-content: center;
+
+}
+
+.mic-icon {
+    /* border: 2px solid red; */
+    /* padding: 10px; */
+    border-radius: 50px;
+    /* justify-content: right; */
+}
+
+.sidebar {
+    /* border: 2px solid red; */
+    width: 15%;
+    height: 150vh;
+    position: fixed;
+    /*here because of this the taskbar and left part gets overlapped */
+    top: 0;
+    z-index: 50;
+    padding-top: 70px;
+    padding-left: 8px;
+    /* margin-bottom: 2px; */
+}
+
+.smaller-sidebar {
+    width: 5%;
+    /*width will get toggled that means reduced */
+}
+
+.smaller-sidebar a p {
+    display: none;
+    /*sidebar will not display the content but will display icons*/
+}
+
+.sidebar-upper a {
+    padding: 6px;
+    /*horizontal gap between the home,shorts...*/
+    margin-bottom: 5px;
+}
+
+.sidebar-upper a img {
+    width: 25px;
+    margin-right: 15px;
+    /*gap between the fig and the text*/
+}
+
+.sidebar-upper a:first-child {
+    /* border: 2px solid red;targets the first box home with red color */
+    border-radius: 150px;
+    background-color: rgb(223, 218, 218);
+
+}
+
+.sidebar-upper a:hover {
+    /* border: 2px solid red;targets the first box home with red color */
+    border-radius: 150px;
+    background-color: rgb(223, 218, 218);
+
+}
+
+.maincontainer {
+    /* border: 2px solid red; */
+    margin-left: 17%;
+    /* padding-left: 1%; */
+    flex-wrap: wrap;
+    /* padding-right: 2%; */
+}
+
+/*this occupies space from left this is mainconatainer*/
+.larger-maincontainer {
+    /* border: 2px solid red; */
+    margin-left: 7%;
+    flex-wrap: wrap;
+}
+
+.card {
+    /* border: 2px solid green; */
+    width: 200px;
+    /*box for the conatiner box*/
+    margin-right: 19px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/*during toggling setting the card size,here only a single card is getting larger if u execute the width line*/
+.larger-card {
+    width: 300px;
+    /*box for the conatiner box*/
+    margin-right: 19px;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.thumbnailImg {
+    width: 100%;
+    border-radius: 9px;
+    /*shapping for the boxes in main container*/
+
+}
+
+.logocontainer .userImg {
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 3px;
+}
+
+/* .logocontainer{
+    align-items: flex-start;
+} */
+
+
+.video-container {
+    /* border: 2px solid red; */
+    padding-left: 1rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-container .content-left {
+    flex-basis: 62%;
+    /* height: 50%; */
+    /* border: 2px solid green; */
+}
+
+.video-container .content-left video {
+    width: 100%;
+}
+
+.video-container .content-right {
+    flex-basis: 36%;
+    /* height: 50%; */
+    /* border: 2px solid green; */
+    padding-right: 2.5rem;
+}
+
+.video-list {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.video-list img {
+    width: 190px;
+    border-radius: 5px;
+}
+
+.below-video-container {
+    /* border: 2px solid green; */
+    color: black;
+}
+
+.below-video-container h1 {
+    font-size: 1.6rem;
+}
+
+.other-details {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.other-details-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    /* border: 2px solid green; */
+}
+
+.channelnameandicon,
+.joinandsubsbuttoncontainer ,.other-details-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.other-details-right{
+    /* border: 2px solid red; */
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+.other-details-right img{
+    width: 25px;
+    /* padding: 0.1rem; */
+    /* border: 1px solid rgb(251, 250, 250); */
+    /* border-radius: 60px; */
+    /* background-color: #e8e6e6; */
+    
+} 
+
+.channelIcon{
+    width: 35px;
+    border-radius: 500%;
+    margin-right: .2rem;
+}
+
+.subscCount{
+    font-size: .6rem;
+}
+
+.joinandsubsbuttoncontainer{
+    /* border: 2px solid red; */
+    /* padding: 1rem .5rem; */
+    border-radius: 300px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.joinButton{
+    padding: .1rem 1.5rem;
+    margin-right: .2rem;
+    border-radius: 10px;
+    font-weight: 500;
+    color: black;
+}
+
+.subsButton{
+    padding: .1rem 1.5rem; 
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.descriptioncontainer{
+    background-color: rgb(227, 223, 223);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.descriptioncontainer p{
+    font-size: .9rem;
+}
+.commentContainer{
+    margin-top: 1.5rem;
+}
+
+.commentContainer h1{
+    font-size: 1rem;
+}
+
+.writeCommentsContainer{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.writeCommentsContainer input{
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: .5px solid rgb(4, 4, 4);
+    color: rgb(9, 8, 8);
+    width: 100%;
+}
+
+.previousComments{
+    margin-top: 1rem;
+}
+
+.nameAndComment .channelName{
+font-size: .6rem;
+margin-bottom: 0.1rem;
+}
+
+@media only screen and (max-width: 500px) 
+{
+    .sidebar a p,
+    .uploadImg,
+    .notifiationImg,
+    .ytLogo,
+    .mic-div,.search-Div  {
+      display: none;
+    }
+  .card{
+    width: 350px;
+  }
+  
+  .video-container{
+    padding-left: .5rem;
+  }
+  .content{
+    flex-direction: column;
+  }
+  }
